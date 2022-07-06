@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         LoadCSV
 // @namespace    https://blog.oimaster.ml/
-// @version      1.0
+// @version      1.1
 // @description  在 OIMOJ 比赛榜单上显示导出 vijos csv 选项
 // @author       oimasterakioi
 // @icon         https://yun.oimaster.ml/favicon.ico
@@ -41,7 +41,7 @@ $(function(){
 
     for(var i=0; i<problems.length; ++i){
         var id = i + 1;
-        problemstr = problemstr + ',#'+ id + ' ' + problems[i];
+        problemstr = problemstr + ',"#'+ id + ' ' + problems[i] + '"';
     }
 
     var csvData = "";
